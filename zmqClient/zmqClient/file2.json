@@ -1,0 +1,3010 @@
+{
+  "FE": {
+    "Logger": "sys_srv.log",
+    "FCA": {
+      "Board_Number": "02_00",
+      "IP": "192.169.200.10",
+      "PC_IP": [
+        192,
+        168,
+        77,
+        200
+      ],
+      "Logger": "sys_srv.log",
+      "Devices": {},
+      "PL": {
+        "SMI": {
+          "cfg_init": {
+            "ch_en_mask": "0x01",
+            "multi_pack_en_mask": "0x01",
+            "tx_intr_en": "0x0",
+            "rx_intr_en": "0x0",
+            "gate_delay_us": 1,
+            "gate_t": 15000000,
+            "to2gate_t": 60000000,
+            "CH_CFG_LIST": [
+              {
+                "br_div": 81
+              },
+              {
+                "br_div": 81
+              },
+              {
+                "br_div": 81
+              },
+              {
+                "br_div": 81
+              }
+            ]
+          }
+        }
+      },
+      "Blades": [
+        {
+          "Blade_NUM": 0,
+          "Type": "HBlade",
+          "Brd_num": "00_00",
+          "FW_VER": 1,
+          "UID": "0xcc",
+          "Domain": 0,
+          "Enable": "Y",
+          "LP": "False",
+          "PL": {
+            "ST_PULSER": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x4001",
+                "START_TX": {
+                  "Mask": "0x01",
+                  "Offset": 0
+                },
+                "SW_TRIGGER": {
+                  "Mask": "0x02",
+                  "Offset": 1
+                },
+                "TRG_SRC": {
+                  "Mask": "0x04",
+                  "Offset": 2
+                },
+                "RW_MODE": {
+                  "Mask": "0x08",
+                  "Offset": 3
+                },
+                "TX_SIZE": {
+                  "Mask": "0x7FFF0",
+                  "Offset": 4
+                },
+                "WRITE_ADDRESS": {
+                  "Mask": "0xFFF80000",
+                  "Offset": 19
+                }
+              },
+              "DEV_MASK": {
+                "cfg_init": "0xffff",
+                "REG_OFFSET": "0x4007"
+              },
+              "STATUS_REG": {
+                "REG_OFFSET": "0x4008"
+              },
+              "ST_TRIG_DUT_REG": {
+                "REG_OFFSET": "0x400C",
+                "TRIG_DURATION": {
+                  "Mask": "0xFFFF",
+                  "Offset": 0
+                },
+                "CTL_3_3_V": {
+                  "Mask": "0x10000",
+                  "Offset": 16
+                }
+              },
+              "RX_DATA": {
+                "REG_OFFSET": "0x1000"
+              },
+              "TX_DATA": {
+                "REG_OFFSET": "0x800"
+              }
+            },
+            "SPI": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x4000",
+                "START_TX": {
+                  "Mask": "0x01",
+                  "Offset": 0
+                },
+                "DEV_CS": {
+                  "Mask": "0x7C",
+                  "Offset": 2
+                },
+                "DDS_EN_PULSER_EN": {
+                  "Mask": "0x80",
+                  "Offset": 7
+                },
+                "TX_SIZE": {
+                  "Mask": "0xffff0000",
+                  "Offset": 16
+                }
+              },
+              "TX_DATA": {
+                "REG_OFFSET": "0x2000"
+              },
+              "RX_DATA": {
+                "REG_OFFSET": "0x2000"
+              }
+            },
+            "PLL": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x400A",
+                "PLL_LD": {
+                  "Mask": "0x01",
+                  "Offset": 0
+                },
+                "PLL_SYNC": {
+                  "Mask": "0x02",
+                  "Offset": 1
+                },
+                "PLL_CLK_SEL0": {
+                  "Mask": "0x04",
+                  "Offset": 2
+                },
+                "PLL_CLK_SEL1": {
+                  "Mask": "0x08",
+                  "Offset": 3
+                },
+                "PLL_STATUS": {
+                  "Mask": "0x10",
+                  "Offset": 4
+                }
+              }
+            },
+            "PS": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x4005",
+                "MHV_EN": {
+                  "Mask": "0x10000",
+                  "Offset": 16
+                },
+                "PHV_EN": {
+                  "Mask": "0x20000",
+                  "Offset": 17
+                }
+              },
+              "HV_CURR_LIM": {
+                "REG_OFFSET": "0x4002",
+                "PULSER_PS_TH": {
+                  "Mask": "0xFFFF",
+                  "Offset": 0
+                },
+                "SSR_TH": {
+                  "Mask": "0xFFFF0000",
+                  "Offset": 16
+                }
+              },
+              "PS_FAULT_REG": {
+                "REG_OFFSET": "0x4012",
+                "PULSER_PS_FAULT_VAL": {
+                  "Mask": "0xFFFF",
+                  "Offset": 0
+                },
+                "SSR_FAULT_VAL": {
+                  "Mask": "0xFFFF0000",
+                  "Offset": 16
+                }
+              },
+              "HV_MON_REB": {
+                "REG_OFFSET": "0x400E",
+                "ADC_DATA": {
+                  "Mask": "0x0FFF",
+                  "Offset": 0
+                }
+              }
+            },
+            "SMI": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x401B",
+                "cfg_init": "0x28",
+                "BR_DIV": {
+                  "Mask": "0xff",
+                  "Offset": 0
+                }
+              }
+            },
+            "GP": {
+              "MEM_Offset": "0x0",
+              "FW_ver_REG": {
+                "REG_OFFSET": "0x400F",
+                "FW_VER": {
+                  "Mask": "0xff",
+                  "Offset": 0
+                }
+              }
+            }
+          },
+          "HL": {
+            "ST_PULSER": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x4001",
+                "START_TX": {
+                  "Mask": "0x01",
+                  "Offset": 0
+                },
+                "SW_TRIGGER": {
+                  "Mask": "0x02",
+                  "Offset": 1
+                },
+                "TRG_SRC": {
+                  "Mask": "0x04",
+                  "Offset": 2
+                },
+                "RW_MODE": {
+                  "Mask": "0x08",
+                  "Offset": 3
+                },
+                "TX_SIZE": {
+                  "Mask": "0x7FFF0",
+                  "Offset": 4
+                },
+                "WRITE_ADDRESS": {
+                  "Mask": "0xFFF80000",
+                  "Offset": 19
+                }
+              },
+              "DEV_MASK": {
+                "cfg_init": "0xffff",
+                "REG_OFFSET": "0x4007"
+              },
+              "STATUS_REG": {
+                "REG_OFFSET": "0x4008"
+              },
+              "ST_TRIG_DUT_REG": {
+                "REG_OFFSET": "0x400C",
+                "TRIG_DURATION": {
+                  "Mask": "0xFFFF",
+                  "Offset": 0
+                },
+                "CTL_3_3_V": {
+                  "Mask": "0x10000",
+                  "Offset": 16
+                }
+              },
+              "RX_DATA": {
+                "REG_OFFSET": "0x1000"
+              },
+              "TX_DATA": {
+                "REG_OFFSET": "0x800"
+              }
+            },
+            "SPI": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x4000",
+                "START_TX": {
+                  "Mask": "0x01",
+                  "Offset": 0
+                },
+                "DEV_CS": {
+                  "Mask": "0x7C",
+                  "Offset": 2
+                },
+                "DDS_EN_PULSER_EN": {
+                  "Mask": "0x80",
+                  "Offset": 7
+                },
+                "TX_SIZE": {
+                  "Mask": "0xffff0000",
+                  "Offset": 16
+                }
+              },
+              "TX_DATA": {
+                "REG_OFFSET": "0x2000"
+              },
+              "RX_DATA": {
+                "REG_OFFSET": "0x2000"
+              }
+            },
+            "PLL": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x400A",
+                "PLL_LD": {
+                  "Mask": "0x01",
+                  "Offset": 0
+                },
+                "PLL_SYNC": {
+                  "Mask": "0x02",
+                  "Offset": 1
+                },
+                "PLL_CLK_SEL0": {
+                  "Mask": "0x04",
+                  "Offset": 2
+                },
+                "PLL_CLK_SEL1": {
+                  "Mask": "0x08",
+                  "Offset": 3
+                },
+                "PLL_STATUS": {
+                  "Mask": "0x10",
+                  "Offset": 4
+                }
+              }
+            },
+            "PS": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x4005",
+                "MHV_EN": {
+                  "Mask": "0x10000",
+                  "Offset": 16
+                },
+                "PHV_EN": {
+                  "Mask": "0x20000",
+                  "Offset": 17
+                }
+              },
+              "HV_CURR_LIM": {
+                "REG_OFFSET": "0x4002",
+                "PULSER_PS_TH": {
+                  "Mask": "0xFFFF",
+                  "Offset": 0
+                },
+                "SSR_TH": {
+                  "Mask": "0xFFFF0000",
+                  "Offset": 16
+                }
+              },
+              "PS_FAULT_REG": {
+                "REG_OFFSET": "0x4012",
+                "PULSER_PS_FAULT_VAL": {
+                  "Mask": "0xFFFF",
+                  "Offset": 0
+                },
+                "SSR_FAULT_VAL": {
+                  "Mask": "0xFFFF0000",
+                  "Offset": 16
+                }
+              },
+              "HV_MON_REB": {
+                "REG_OFFSET": "0x400E",
+                "ADC_DATA": {
+                  "Mask": "0x0FFF",
+                  "Offset": 0
+                }
+              }
+            },
+            "SMI": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x401B",
+                "cfg_init": "0x28",
+                "BR_DIV": {
+                  "Mask": "0xff",
+                  "Offset": 0
+                }
+              }
+            },
+            "GP": {
+              "MEM_Offset": "0x0",
+              "FW_ver_REG": {
+                "REG_OFFSET": "0x400F",
+                "FW_VER": {
+                  "Mask": "0xff",
+                  "Offset": 0
+                }
+              }
+            }
+          },
+          "FT": {
+            "ST_PULSER": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x4001",
+                "START_TX": {
+                  "Mask": "0x01",
+                  "Offset": 0
+                },
+                "SW_TRIGGER": {
+                  "Mask": "0x02",
+                  "Offset": 1
+                },
+                "TRG_SRC": {
+                  "Mask": "0x04",
+                  "Offset": 2
+                },
+                "RW_MODE": {
+                  "Mask": "0x08",
+                  "Offset": 3
+                },
+                "TX_SIZE": {
+                  "Mask": "0x7FFF0",
+                  "Offset": 4
+                },
+                "WRITE_ADDRESS": {
+                  "Mask": "0xFFF80000",
+                  "Offset": 19
+                }
+              },
+              "DEV_MASK": {
+                "cfg_init": "0xffff",
+                "REG_OFFSET": "0x4007"
+              },
+              "STATUS_REG": {
+                "REG_OFFSET": "0x4008"
+              },
+              "ST_TRIG_DUT_REG": {
+                "REG_OFFSET": "0x400C",
+                "TRIG_DURATION": {
+                  "Mask": "0xFFFF",
+                  "Offset": 0
+                },
+                "CTL_3_3_V": {
+                  "Mask": "0x10000",
+                  "Offset": 16
+                }
+              },
+              "RX_DATA": {
+                "REG_OFFSET": "0x1000"
+              },
+              "TX_DATA": {
+                "REG_OFFSET": "0x800"
+              }
+            },
+            "SPI": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x4000",
+                "START_TX": {
+                  "Mask": "0x01",
+                  "Offset": 0
+                },
+                "DEV_CS": {
+                  "Mask": "0x7C",
+                  "Offset": 2
+                },
+                "DDS_EN_PULSER_EN": {
+                  "Mask": "0x80",
+                  "Offset": 7
+                },
+                "TX_SIZE": {
+                  "Mask": "0xffff0000",
+                  "Offset": 16
+                }
+              },
+              "TX_DATA": {
+                "REG_OFFSET": "0x2000"
+              },
+              "RX_DATA": {
+                "REG_OFFSET": "0x2000"
+              }
+            },
+            "PLL": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x400A",
+                "PLL_LD": {
+                  "Mask": "0x01",
+                  "Offset": 0
+                },
+                "PLL_SYNC": {
+                  "Mask": "0x02",
+                  "Offset": 1
+                },
+                "PLL_CLK_SEL0": {
+                  "Mask": "0x04",
+                  "Offset": 2
+                },
+                "PLL_CLK_SEL1": {
+                  "Mask": "0x08",
+                  "Offset": 3
+                },
+                "PLL_STATUS": {
+                  "Mask": "0x10",
+                  "Offset": 4
+                }
+              }
+            },
+            "PS": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x4005",
+                "MHV_EN": {
+                  "Mask": "0x10000",
+                  "Offset": 16
+                },
+                "PHV_EN": {
+                  "Mask": "0x20000",
+                  "Offset": 17
+                }
+              },
+              "HV_CURR_LIM": {
+                "REG_OFFSET": "0x4002",
+                "PULSER_PS_TH": {
+                  "Mask": "0xFFFF",
+                  "Offset": 0
+                },
+                "SSR_TH": {
+                  "Mask": "0xFFFF0000",
+                  "Offset": 16
+                }
+              },
+              "PS_FAULT_REG": {
+                "REG_OFFSET": "0x4012",
+                "PULSER_PS_FAULT_VAL": {
+                  "Mask": "0xFFFF",
+                  "Offset": 0
+                },
+                "SSR_FAULT_VAL": {
+                  "Mask": "0xFFFF0000",
+                  "Offset": 16
+                }
+              },
+              "HV_MON_REB": {
+                "REG_OFFSET": "0x400E",
+                "ADC_DATA": {
+                  "Mask": "0x0FFF",
+                  "Offset": 0
+                }
+              }
+            },
+            "SMI": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x401B",
+                "cfg_init": "0x28",
+                "BR_DIV": {
+                  "Mask": "0xff",
+                  "Offset": 0
+                }
+              }
+            },
+            "GP": {
+              "MEM_Offset": "0x0",
+              "FW_ver_REG": {
+                "REG_OFFSET": "0x400F",
+                "FW_VER": {
+                  "Mask": "0xff",
+                  "Offset": 0
+                }
+              }
+            }
+          },
+          "RL": {
+            "ST_PULSER": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x4001",
+                "START_TX": {
+                  "Mask": "0x01",
+                  "Offset": 0
+                },
+                "SW_TRIGGER": {
+                  "Mask": "0x02",
+                  "Offset": 1
+                },
+                "TRG_SRC": {
+                  "Mask": "0x04",
+                  "Offset": 2
+                },
+                "RW_MODE": {
+                  "Mask": "0x08",
+                  "Offset": 3
+                },
+                "TX_SIZE": {
+                  "Mask": "0x7FFF0",
+                  "Offset": 4
+                },
+                "WRITE_ADDRESS": {
+                  "Mask": "0xFFF80000",
+                  "Offset": 19
+                }
+              },
+              "DEV_MASK": {
+                "cfg_init": "0xffff",
+                "REG_OFFSET": "0x4007"
+              },
+              "STATUS_REG": {
+                "REG_OFFSET": "0x4008"
+              },
+              "ST_TRIG_DUT_REG": {
+                "REG_OFFSET": "0x400C",
+                "TRIG_DURATION": {
+                  "Mask": "0xFFFF",
+                  "Offset": 0
+                },
+                "CTL_3_3_V": {
+                  "Mask": "0x10000",
+                  "Offset": 16
+                }
+              },
+              "RX_DATA": {
+                "REG_OFFSET": "0x1000"
+              },
+              "TX_DATA": {
+                "REG_OFFSET": "0x800"
+              }
+            },
+            "SPI": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x4000",
+                "START_TX": {
+                  "Mask": "0x01",
+                  "Offset": 0
+                },
+                "DEV_CS": {
+                  "Mask": "0x7C",
+                  "Offset": 2
+                },
+                "DDS_EN_PULSER_EN": {
+                  "Mask": "0x80",
+                  "Offset": 7
+                },
+                "TX_SIZE": {
+                  "Mask": "0xffff0000",
+                  "Offset": 16
+                }
+              },
+              "TX_DATA": {
+                "REG_OFFSET": "0x2000"
+              },
+              "RX_DATA": {
+                "REG_OFFSET": "0x2000"
+              }
+            },
+            "PLL": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x400A",
+                "PLL_LD": {
+                  "Mask": "0x01",
+                  "Offset": 0
+                },
+                "PLL_SYNC": {
+                  "Mask": "0x02",
+                  "Offset": 1
+                },
+                "PLL_CLK_SEL0": {
+                  "Mask": "0x04",
+                  "Offset": 2
+                },
+                "PLL_CLK_SEL1": {
+                  "Mask": "0x08",
+                  "Offset": 3
+                },
+                "PLL_STATUS": {
+                  "Mask": "0x10",
+                  "Offset": 4
+                }
+              }
+            },
+            "PS": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x4005",
+                "MHV_EN": {
+                  "Mask": "0x10000",
+                  "Offset": 16
+                },
+                "PHV_EN": {
+                  "Mask": "0x20000",
+                  "Offset": 17
+                }
+              },
+              "HV_CURR_LIM": {
+                "REG_OFFSET": "0x4002",
+                "PULSER_PS_TH": {
+                  "Mask": "0xFFFF",
+                  "Offset": 0
+                },
+                "SSR_TH": {
+                  "Mask": "0xFFFF0000",
+                  "Offset": 16
+                }
+              },
+              "PS_FAULT_REG": {
+                "REG_OFFSET": "0x4012",
+                "PULSER_PS_FAULT_VAL": {
+                  "Mask": "0xFFFF",
+                  "Offset": 0
+                },
+                "SSR_FAULT_VAL": {
+                  "Mask": "0xFFFF0000",
+                  "Offset": 16
+                }
+              },
+              "HV_MON_REB": {
+                "REG_OFFSET": "0x400E",
+                "ADC_DATA": {
+                  "Mask": "0x0FFF",
+                  "Offset": 0
+                }
+              }
+            },
+            "SMI": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x401B",
+                "cfg_init": "0x28",
+                "BR_DIV": {
+                  "Mask": "0xff",
+                  "Offset": 0
+                }
+              }
+            },
+            "GP": {
+              "MEM_Offset": "0x0",
+              "FW_ver_REG": {
+                "REG_OFFSET": "0x400F",
+                "FW_VER": {
+                  "Mask": "0xff",
+                  "Offset": 0
+                }
+              }
+            }
+          },
+          "DEV_COMM1": {
+            "UID": "0xEE",
+            "PSUA_IP": "192.168.170.120",
+            "PSUB_IP": "192.168.170.8",
+            "UDP_PORT": 8030,
+            "IS_PSU_CONNECTION_REAL": 1
+          },
+          "DEV_COMM2": {
+            "UID": "0xEE",
+            "PSUA_IP": "192.168.170.120",
+            "PSUB_IP": "192.168.170.8",
+            "UDP_PORT": 8030,
+            "IS_PSU_CONNECTION_REAL": 1
+          },
+          "DEV_COMM3": {
+            "UID": "0xEE",
+            "PSUA_IP": "192.168.170.120",
+            "PSUB_IP": "192.168.170.8",
+            "UDP_PORT": 8030,
+            "IS_PSU_CONNECTION_REAL": 1
+          },
+          "DEV_COMM4": {
+            "UID": "0xEE",
+            "PSUA_IP": "192.168.170.120",
+            "PSUB_IP": "192.168.170.8",
+            "UDP_PORT": 8030,
+            "IS_PSU_CONNECTION_REAL": 1
+          },
+          "DEV_COMM5": {
+            "UID": "0xEE",
+            "PSUA_IP": "192.168.170.120",
+            "PSUB_IP": "192.168.170.8",
+            "UDP_PORT": 8030,
+            "IS_PSU_CONNECTION_REAL": 1
+          }
+        },
+        {
+          "Blade_NUM": 0,
+          "Type": "HBlade",
+          "Brd_num": "00_00",
+          "FW_VER": 1,
+          "UID": "0xcc",
+          "Domain": 0,
+          "Enable": "Y",
+          "LP": "False",
+          "PL": {
+            "ST_PULSER": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x4001",
+                "START_TX": {
+                  "Mask": "0x01",
+                  "Offset": 0
+                },
+                "SW_TRIGGER": {
+                  "Mask": "0x02",
+                  "Offset": 1
+                },
+                "TRG_SRC": {
+                  "Mask": "0x04",
+                  "Offset": 2
+                },
+                "RW_MODE": {
+                  "Mask": "0x08",
+                  "Offset": 3
+                },
+                "TX_SIZE": {
+                  "Mask": "0x7FFF0",
+                  "Offset": 4
+                },
+                "WRITE_ADDRESS": {
+                  "Mask": "0xFFF80000",
+                  "Offset": 19
+                }
+              },
+              "DEV_MASK": {
+                "cfg_init": "0xffff",
+                "REG_OFFSET": "0x4007"
+              },
+              "STATUS_REG": {
+                "REG_OFFSET": "0x4008"
+              },
+              "ST_TRIG_DUT_REG": {
+                "REG_OFFSET": "0x400C",
+                "TRIG_DURATION": {
+                  "Mask": "0xFFFF",
+                  "Offset": 0
+                },
+                "CTL_3_3_V": {
+                  "Mask": "0x10000",
+                  "Offset": 16
+                }
+              },
+              "RX_DATA": {
+                "REG_OFFSET": "0x1000"
+              },
+              "TX_DATA": {
+                "REG_OFFSET": "0x800"
+              }
+            },
+            "SPI": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x4000",
+                "START_TX": {
+                  "Mask": "0x01",
+                  "Offset": 0
+                },
+                "DEV_CS": {
+                  "Mask": "0x7C",
+                  "Offset": 2
+                },
+                "DDS_EN_PULSER_EN": {
+                  "Mask": "0x80",
+                  "Offset": 7
+                },
+                "TX_SIZE": {
+                  "Mask": "0xffff0000",
+                  "Offset": 16
+                }
+              },
+              "TX_DATA": {
+                "REG_OFFSET": "0x2000"
+              },
+              "RX_DATA": {
+                "REG_OFFSET": "0x2000"
+              }
+            },
+            "PLL": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x400A",
+                "PLL_LD": {
+                  "Mask": "0x01",
+                  "Offset": 0
+                },
+                "PLL_SYNC": {
+                  "Mask": "0x02",
+                  "Offset": 1
+                },
+                "PLL_CLK_SEL0": {
+                  "Mask": "0x04",
+                  "Offset": 2
+                },
+                "PLL_CLK_SEL1": {
+                  "Mask": "0x08",
+                  "Offset": 3
+                },
+                "PLL_STATUS": {
+                  "Mask": "0x10",
+                  "Offset": 4
+                }
+              }
+            },
+            "PS": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x4005",
+                "MHV_EN": {
+                  "Mask": "0x10000",
+                  "Offset": 16
+                },
+                "PHV_EN": {
+                  "Mask": "0x20000",
+                  "Offset": 17
+                }
+              },
+              "HV_CURR_LIM": {
+                "REG_OFFSET": "0x4002",
+                "PULSER_PS_TH": {
+                  "Mask": "0xFFFF",
+                  "Offset": 0
+                },
+                "SSR_TH": {
+                  "Mask": "0xFFFF0000",
+                  "Offset": 16
+                }
+              },
+              "PS_FAULT_REG": {
+                "REG_OFFSET": "0x4012",
+                "PULSER_PS_FAULT_VAL": {
+                  "Mask": "0xFFFF",
+                  "Offset": 0
+                },
+                "SSR_FAULT_VAL": {
+                  "Mask": "0xFFFF0000",
+                  "Offset": 16
+                }
+              },
+              "HV_MON_REB": {
+                "REG_OFFSET": "0x400E",
+                "ADC_DATA": {
+                  "Mask": "0x0FFF",
+                  "Offset": 0
+                }
+              }
+            },
+            "SMI": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x401B",
+                "cfg_init": "0x28",
+                "BR_DIV": {
+                  "Mask": "0xff",
+                  "Offset": 0
+                }
+              }
+            },
+            "GP": {
+              "MEM_Offset": "0x0",
+              "FW_ver_REG": {
+                "REG_OFFSET": "0x400F",
+                "FW_VER": {
+                  "Mask": "0xff",
+                  "Offset": 0
+                }
+              }
+            }
+          },
+          "HL": {
+            "ST_PULSER": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x4001",
+                "START_TX": {
+                  "Mask": "0x01",
+                  "Offset": 0
+                },
+                "SW_TRIGGER": {
+                  "Mask": "0x02",
+                  "Offset": 1
+                },
+                "TRG_SRC": {
+                  "Mask": "0x04",
+                  "Offset": 2
+                },
+                "RW_MODE": {
+                  "Mask": "0x08",
+                  "Offset": 3
+                },
+                "TX_SIZE": {
+                  "Mask": "0x7FFF0",
+                  "Offset": 4
+                },
+                "WRITE_ADDRESS": {
+                  "Mask": "0xFFF80000",
+                  "Offset": 19
+                }
+              },
+              "DEV_MASK": {
+                "cfg_init": "0xffff",
+                "REG_OFFSET": "0x4007"
+              },
+              "STATUS_REG": {
+                "REG_OFFSET": "0x4008"
+              },
+              "ST_TRIG_DUT_REG": {
+                "REG_OFFSET": "0x400C",
+                "TRIG_DURATION": {
+                  "Mask": "0xFFFF",
+                  "Offset": 0
+                },
+                "CTL_3_3_V": {
+                  "Mask": "0x10000",
+                  "Offset": 16
+                }
+              },
+              "RX_DATA": {
+                "REG_OFFSET": "0x1000"
+              },
+              "TX_DATA": {
+                "REG_OFFSET": "0x800"
+              }
+            },
+            "SPI": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x4000",
+                "START_TX": {
+                  "Mask": "0x01",
+                  "Offset": 0
+                },
+                "DEV_CS": {
+                  "Mask": "0x7C",
+                  "Offset": 2
+                },
+                "DDS_EN_PULSER_EN": {
+                  "Mask": "0x80",
+                  "Offset": 7
+                },
+                "TX_SIZE": {
+                  "Mask": "0xffff0000",
+                  "Offset": 16
+                }
+              },
+              "TX_DATA": {
+                "REG_OFFSET": "0x2000"
+              },
+              "RX_DATA": {
+                "REG_OFFSET": "0x2000"
+              }
+            },
+            "PLL": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x400A",
+                "PLL_LD": {
+                  "Mask": "0x01",
+                  "Offset": 0
+                },
+                "PLL_SYNC": {
+                  "Mask": "0x02",
+                  "Offset": 1
+                },
+                "PLL_CLK_SEL0": {
+                  "Mask": "0x04",
+                  "Offset": 2
+                },
+                "PLL_CLK_SEL1": {
+                  "Mask": "0x08",
+                  "Offset": 3
+                },
+                "PLL_STATUS": {
+                  "Mask": "0x10",
+                  "Offset": 4
+                }
+              }
+            },
+            "PS": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x4005",
+                "MHV_EN": {
+                  "Mask": "0x10000",
+                  "Offset": 16
+                },
+                "PHV_EN": {
+                  "Mask": "0x20000",
+                  "Offset": 17
+                }
+              },
+              "HV_CURR_LIM": {
+                "REG_OFFSET": "0x4002",
+                "PULSER_PS_TH": {
+                  "Mask": "0xFFFF",
+                  "Offset": 0
+                },
+                "SSR_TH": {
+                  "Mask": "0xFFFF0000",
+                  "Offset": 16
+                }
+              },
+              "PS_FAULT_REG": {
+                "REG_OFFSET": "0x4012",
+                "PULSER_PS_FAULT_VAL": {
+                  "Mask": "0xFFFF",
+                  "Offset": 0
+                },
+                "SSR_FAULT_VAL": {
+                  "Mask": "0xFFFF0000",
+                  "Offset": 16
+                }
+              },
+              "HV_MON_REB": {
+                "REG_OFFSET": "0x400E",
+                "ADC_DATA": {
+                  "Mask": "0x0FFF",
+                  "Offset": 0
+                }
+              }
+            },
+            "SMI": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x401B",
+                "cfg_init": "0x28",
+                "BR_DIV": {
+                  "Mask": "0xff",
+                  "Offset": 0
+                }
+              }
+            },
+            "GP": {
+              "MEM_Offset": "0x0",
+              "FW_ver_REG": {
+                "REG_OFFSET": "0x400F",
+                "FW_VER": {
+                  "Mask": "0xff",
+                  "Offset": 0
+                }
+              }
+            }
+          },
+          "FT": {
+            "ST_PULSER": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x4001",
+                "START_TX": {
+                  "Mask": "0x01",
+                  "Offset": 0
+                },
+                "SW_TRIGGER": {
+                  "Mask": "0x02",
+                  "Offset": 1
+                },
+                "TRG_SRC": {
+                  "Mask": "0x04",
+                  "Offset": 2
+                },
+                "RW_MODE": {
+                  "Mask": "0x08",
+                  "Offset": 3
+                },
+                "TX_SIZE": {
+                  "Mask": "0x7FFF0",
+                  "Offset": 4
+                },
+                "WRITE_ADDRESS": {
+                  "Mask": "0xFFF80000",
+                  "Offset": 19
+                }
+              },
+              "DEV_MASK": {
+                "cfg_init": "0xffff",
+                "REG_OFFSET": "0x4007"
+              },
+              "STATUS_REG": {
+                "REG_OFFSET": "0x4008"
+              },
+              "ST_TRIG_DUT_REG": {
+                "REG_OFFSET": "0x400C",
+                "TRIG_DURATION": {
+                  "Mask": "0xFFFF",
+                  "Offset": 0
+                },
+                "CTL_3_3_V": {
+                  "Mask": "0x10000",
+                  "Offset": 16
+                }
+              },
+              "RX_DATA": {
+                "REG_OFFSET": "0x1000"
+              },
+              "TX_DATA": {
+                "REG_OFFSET": "0x800"
+              }
+            },
+            "SPI": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x4000",
+                "START_TX": {
+                  "Mask": "0x01",
+                  "Offset": 0
+                },
+                "DEV_CS": {
+                  "Mask": "0x7C",
+                  "Offset": 2
+                },
+                "DDS_EN_PULSER_EN": {
+                  "Mask": "0x80",
+                  "Offset": 7
+                },
+                "TX_SIZE": {
+                  "Mask": "0xffff0000",
+                  "Offset": 16
+                }
+              },
+              "TX_DATA": {
+                "REG_OFFSET": "0x2000"
+              },
+              "RX_DATA": {
+                "REG_OFFSET": "0x2000"
+              }
+            },
+            "PLL": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x400A",
+                "PLL_LD": {
+                  "Mask": "0x01",
+                  "Offset": 0
+                },
+                "PLL_SYNC": {
+                  "Mask": "0x02",
+                  "Offset": 1
+                },
+                "PLL_CLK_SEL0": {
+                  "Mask": "0x04",
+                  "Offset": 2
+                },
+                "PLL_CLK_SEL1": {
+                  "Mask": "0x08",
+                  "Offset": 3
+                },
+                "PLL_STATUS": {
+                  "Mask": "0x10",
+                  "Offset": 4
+                }
+              }
+            },
+            "PS": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x4005",
+                "MHV_EN": {
+                  "Mask": "0x10000",
+                  "Offset": 16
+                },
+                "PHV_EN": {
+                  "Mask": "0x20000",
+                  "Offset": 17
+                }
+              },
+              "HV_CURR_LIM": {
+                "REG_OFFSET": "0x4002",
+                "PULSER_PS_TH": {
+                  "Mask": "0xFFFF",
+                  "Offset": 0
+                },
+                "SSR_TH": {
+                  "Mask": "0xFFFF0000",
+                  "Offset": 16
+                }
+              },
+              "PS_FAULT_REG": {
+                "REG_OFFSET": "0x4012",
+                "PULSER_PS_FAULT_VAL": {
+                  "Mask": "0xFFFF",
+                  "Offset": 0
+                },
+                "SSR_FAULT_VAL": {
+                  "Mask": "0xFFFF0000",
+                  "Offset": 16
+                }
+              },
+              "HV_MON_REB": {
+                "REG_OFFSET": "0x400E",
+                "ADC_DATA": {
+                  "Mask": "0x0FFF",
+                  "Offset": 0
+                }
+              }
+            },
+            "SMI": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x401B",
+                "cfg_init": "0x28",
+                "BR_DIV": {
+                  "Mask": "0xff",
+                  "Offset": 0
+                }
+              }
+            },
+            "GP": {
+              "MEM_Offset": "0x0",
+              "FW_ver_REG": {
+                "REG_OFFSET": "0x400F",
+                "FW_VER": {
+                  "Mask": "0xff",
+                  "Offset": 0
+                }
+              }
+            }
+          },
+          "RL": {
+            "ST_PULSER": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x4001",
+                "START_TX": {
+                  "Mask": "0x01",
+                  "Offset": 0
+                },
+                "SW_TRIGGER": {
+                  "Mask": "0x02",
+                  "Offset": 1
+                },
+                "TRG_SRC": {
+                  "Mask": "0x04",
+                  "Offset": 2
+                },
+                "RW_MODE": {
+                  "Mask": "0x08",
+                  "Offset": 3
+                },
+                "TX_SIZE": {
+                  "Mask": "0x7FFF0",
+                  "Offset": 4
+                },
+                "WRITE_ADDRESS": {
+                  "Mask": "0xFFF80000",
+                  "Offset": 19
+                }
+              },
+              "DEV_MASK": {
+                "cfg_init": "0xffff",
+                "REG_OFFSET": "0x4007"
+              },
+              "STATUS_REG": {
+                "REG_OFFSET": "0x4008"
+              },
+              "ST_TRIG_DUT_REG": {
+                "REG_OFFSET": "0x400C",
+                "TRIG_DURATION": {
+                  "Mask": "0xFFFF",
+                  "Offset": 0
+                },
+                "CTL_3_3_V": {
+                  "Mask": "0x10000",
+                  "Offset": 16
+                }
+              },
+              "RX_DATA": {
+                "REG_OFFSET": "0x1000"
+              },
+              "TX_DATA": {
+                "REG_OFFSET": "0x800"
+              }
+            },
+            "SPI": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x4000",
+                "START_TX": {
+                  "Mask": "0x01",
+                  "Offset": 0
+                },
+                "DEV_CS": {
+                  "Mask": "0x7C",
+                  "Offset": 2
+                },
+                "DDS_EN_PULSER_EN": {
+                  "Mask": "0x80",
+                  "Offset": 7
+                },
+                "TX_SIZE": {
+                  "Mask": "0xffff0000",
+                  "Offset": 16
+                }
+              },
+              "TX_DATA": {
+                "REG_OFFSET": "0x2000"
+              },
+              "RX_DATA": {
+                "REG_OFFSET": "0x2000"
+              }
+            },
+            "PLL": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x400A",
+                "PLL_LD": {
+                  "Mask": "0x01",
+                  "Offset": 0
+                },
+                "PLL_SYNC": {
+                  "Mask": "0x02",
+                  "Offset": 1
+                },
+                "PLL_CLK_SEL0": {
+                  "Mask": "0x04",
+                  "Offset": 2
+                },
+                "PLL_CLK_SEL1": {
+                  "Mask": "0x08",
+                  "Offset": 3
+                },
+                "PLL_STATUS": {
+                  "Mask": "0x10",
+                  "Offset": 4
+                }
+              }
+            },
+            "PS": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x4005",
+                "MHV_EN": {
+                  "Mask": "0x10000",
+                  "Offset": 16
+                },
+                "PHV_EN": {
+                  "Mask": "0x20000",
+                  "Offset": 17
+                }
+              },
+              "HV_CURR_LIM": {
+                "REG_OFFSET": "0x4002",
+                "PULSER_PS_TH": {
+                  "Mask": "0xFFFF",
+                  "Offset": 0
+                },
+                "SSR_TH": {
+                  "Mask": "0xFFFF0000",
+                  "Offset": 16
+                }
+              },
+              "PS_FAULT_REG": {
+                "REG_OFFSET": "0x4012",
+                "PULSER_PS_FAULT_VAL": {
+                  "Mask": "0xFFFF",
+                  "Offset": 0
+                },
+                "SSR_FAULT_VAL": {
+                  "Mask": "0xFFFF0000",
+                  "Offset": 16
+                }
+              },
+              "HV_MON_REB": {
+                "REG_OFFSET": "0x400E",
+                "ADC_DATA": {
+                  "Mask": "0x0FFF",
+                  "Offset": 0
+                }
+              }
+            },
+            "SMI": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x401B",
+                "cfg_init": "0x28",
+                "BR_DIV": {
+                  "Mask": "0xff",
+                  "Offset": 0
+                }
+              }
+            },
+            "GP": {
+              "MEM_Offset": "0x0",
+              "FW_ver_REG": {
+                "REG_OFFSET": "0x400F",
+                "FW_VER": {
+                  "Mask": "0xff",
+                  "Offset": 0
+                }
+              }
+            }
+          },
+          "DEV_COMM1": {
+            "UID": "0xEE",
+            "PSUA_IP": "192.168.170.120",
+            "PSUB_IP": "192.168.170.8",
+            "UDP_PORT": 8030,
+            "IS_PSU_CONNECTION_REAL": 1
+          },
+          "DEV_COMM2": {
+            "UID": "0xEE",
+            "PSUA_IP": "192.168.170.120",
+            "PSUB_IP": "192.168.170.8",
+            "UDP_PORT": 8030,
+            "IS_PSU_CONNECTION_REAL": 1
+          },
+          "DEV_COMM3": {
+            "UID": "0xEE",
+            "PSUA_IP": "192.168.170.120",
+            "PSUB_IP": "192.168.170.8",
+            "UDP_PORT": 8030,
+            "IS_PSU_CONNECTION_REAL": 1
+          },
+          "DEV_COMM4": {
+            "UID": "0xEE",
+            "PSUA_IP": "192.168.170.120",
+            "PSUB_IP": "192.168.170.8",
+            "UDP_PORT": 8030,
+            "IS_PSU_CONNECTION_REAL": 1
+          },
+          "DEV_COMM5": {
+            "UID": "0xEE",
+            "PSUA_IP": "192.168.170.120",
+            "PSUB_IP": "192.168.170.8",
+            "UDP_PORT": 8030,
+            "IS_PSU_CONNECTION_REAL": 1
+          }
+        },
+        {
+          "Blade_NUM": 0,
+          "Type": "HBlade",
+          "Brd_num": "00_00",
+          "FW_VER": 1,
+          "UID": "0xcc",
+          "Domain": 0,
+          "Enable": "Y",
+          "LP": "False",
+          "PL": {
+            "ST_PULSER": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x4001",
+                "START_TX": {
+                  "Mask": "0x01",
+                  "Offset": 0
+                },
+                "SW_TRIGGER": {
+                  "Mask": "0x02",
+                  "Offset": 1
+                },
+                "TRG_SRC": {
+                  "Mask": "0x04",
+                  "Offset": 2
+                },
+                "RW_MODE": {
+                  "Mask": "0x08",
+                  "Offset": 3
+                },
+                "TX_SIZE": {
+                  "Mask": "0x7FFF0",
+                  "Offset": 4
+                },
+                "WRITE_ADDRESS": {
+                  "Mask": "0xFFF80000",
+                  "Offset": 19
+                }
+              },
+              "DEV_MASK": {
+                "cfg_init": "0xffff",
+                "REG_OFFSET": "0x4007"
+              },
+              "STATUS_REG": {
+                "REG_OFFSET": "0x4008"
+              },
+              "ST_TRIG_DUT_REG": {
+                "REG_OFFSET": "0x400C",
+                "TRIG_DURATION": {
+                  "Mask": "0xFFFF",
+                  "Offset": 0
+                },
+                "CTL_3_3_V": {
+                  "Mask": "0x10000",
+                  "Offset": 16
+                }
+              },
+              "RX_DATA": {
+                "REG_OFFSET": "0x1000"
+              },
+              "TX_DATA": {
+                "REG_OFFSET": "0x800"
+              }
+            },
+            "SPI": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x4000",
+                "START_TX": {
+                  "Mask": "0x01",
+                  "Offset": 0
+                },
+                "DEV_CS": {
+                  "Mask": "0x7C",
+                  "Offset": 2
+                },
+                "DDS_EN_PULSER_EN": {
+                  "Mask": "0x80",
+                  "Offset": 7
+                },
+                "TX_SIZE": {
+                  "Mask": "0xffff0000",
+                  "Offset": 16
+                }
+              },
+              "TX_DATA": {
+                "REG_OFFSET": "0x2000"
+              },
+              "RX_DATA": {
+                "REG_OFFSET": "0x2000"
+              }
+            },
+            "PLL": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x400A",
+                "PLL_LD": {
+                  "Mask": "0x01",
+                  "Offset": 0
+                },
+                "PLL_SYNC": {
+                  "Mask": "0x02",
+                  "Offset": 1
+                },
+                "PLL_CLK_SEL0": {
+                  "Mask": "0x04",
+                  "Offset": 2
+                },
+                "PLL_CLK_SEL1": {
+                  "Mask": "0x08",
+                  "Offset": 3
+                },
+                "PLL_STATUS": {
+                  "Mask": "0x10",
+                  "Offset": 4
+                }
+              }
+            },
+            "PS": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x4005",
+                "MHV_EN": {
+                  "Mask": "0x10000",
+                  "Offset": 16
+                },
+                "PHV_EN": {
+                  "Mask": "0x20000",
+                  "Offset": 17
+                }
+              },
+              "HV_CURR_LIM": {
+                "REG_OFFSET": "0x4002",
+                "PULSER_PS_TH": {
+                  "Mask": "0xFFFF",
+                  "Offset": 0
+                },
+                "SSR_TH": {
+                  "Mask": "0xFFFF0000",
+                  "Offset": 16
+                }
+              },
+              "PS_FAULT_REG": {
+                "REG_OFFSET": "0x4012",
+                "PULSER_PS_FAULT_VAL": {
+                  "Mask": "0xFFFF",
+                  "Offset": 0
+                },
+                "SSR_FAULT_VAL": {
+                  "Mask": "0xFFFF0000",
+                  "Offset": 16
+                }
+              },
+              "HV_MON_REB": {
+                "REG_OFFSET": "0x400E",
+                "ADC_DATA": {
+                  "Mask": "0x0FFF",
+                  "Offset": 0
+                }
+              }
+            },
+            "SMI": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x401B",
+                "cfg_init": "0x28",
+                "BR_DIV": {
+                  "Mask": "0xff",
+                  "Offset": 0
+                }
+              }
+            },
+            "GP": {
+              "MEM_Offset": "0x0",
+              "FW_ver_REG": {
+                "REG_OFFSET": "0x400F",
+                "FW_VER": {
+                  "Mask": "0xff",
+                  "Offset": 0
+                }
+              }
+            }
+          },
+          "HL": {
+            "ST_PULSER": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x4001",
+                "START_TX": {
+                  "Mask": "0x01",
+                  "Offset": 0
+                },
+                "SW_TRIGGER": {
+                  "Mask": "0x02",
+                  "Offset": 1
+                },
+                "TRG_SRC": {
+                  "Mask": "0x04",
+                  "Offset": 2
+                },
+                "RW_MODE": {
+                  "Mask": "0x08",
+                  "Offset": 3
+                },
+                "TX_SIZE": {
+                  "Mask": "0x7FFF0",
+                  "Offset": 4
+                },
+                "WRITE_ADDRESS": {
+                  "Mask": "0xFFF80000",
+                  "Offset": 19
+                }
+              },
+              "DEV_MASK": {
+                "cfg_init": "0xffff",
+                "REG_OFFSET": "0x4007"
+              },
+              "STATUS_REG": {
+                "REG_OFFSET": "0x4008"
+              },
+              "ST_TRIG_DUT_REG": {
+                "REG_OFFSET": "0x400C",
+                "TRIG_DURATION": {
+                  "Mask": "0xFFFF",
+                  "Offset": 0
+                },
+                "CTL_3_3_V": {
+                  "Mask": "0x10000",
+                  "Offset": 16
+                }
+              },
+              "RX_DATA": {
+                "REG_OFFSET": "0x1000"
+              },
+              "TX_DATA": {
+                "REG_OFFSET": "0x800"
+              }
+            },
+            "SPI": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x4000",
+                "START_TX": {
+                  "Mask": "0x01",
+                  "Offset": 0
+                },
+                "DEV_CS": {
+                  "Mask": "0x7C",
+                  "Offset": 2
+                },
+                "DDS_EN_PULSER_EN": {
+                  "Mask": "0x80",
+                  "Offset": 7
+                },
+                "TX_SIZE": {
+                  "Mask": "0xffff0000",
+                  "Offset": 16
+                }
+              },
+              "TX_DATA": {
+                "REG_OFFSET": "0x2000"
+              },
+              "RX_DATA": {
+                "REG_OFFSET": "0x2000"
+              }
+            },
+            "PLL": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x400A",
+                "PLL_LD": {
+                  "Mask": "0x01",
+                  "Offset": 0
+                },
+                "PLL_SYNC": {
+                  "Mask": "0x02",
+                  "Offset": 1
+                },
+                "PLL_CLK_SEL0": {
+                  "Mask": "0x04",
+                  "Offset": 2
+                },
+                "PLL_CLK_SEL1": {
+                  "Mask": "0x08",
+                  "Offset": 3
+                },
+                "PLL_STATUS": {
+                  "Mask": "0x10",
+                  "Offset": 4
+                }
+              }
+            },
+            "PS": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x4005",
+                "MHV_EN": {
+                  "Mask": "0x10000",
+                  "Offset": 16
+                },
+                "PHV_EN": {
+                  "Mask": "0x20000",
+                  "Offset": 17
+                }
+              },
+              "HV_CURR_LIM": {
+                "REG_OFFSET": "0x4002",
+                "PULSER_PS_TH": {
+                  "Mask": "0xFFFF",
+                  "Offset": 0
+                },
+                "SSR_TH": {
+                  "Mask": "0xFFFF0000",
+                  "Offset": 16
+                }
+              },
+              "PS_FAULT_REG": {
+                "REG_OFFSET": "0x4012",
+                "PULSER_PS_FAULT_VAL": {
+                  "Mask": "0xFFFF",
+                  "Offset": 0
+                },
+                "SSR_FAULT_VAL": {
+                  "Mask": "0xFFFF0000",
+                  "Offset": 16
+                }
+              },
+              "HV_MON_REB": {
+                "REG_OFFSET": "0x400E",
+                "ADC_DATA": {
+                  "Mask": "0x0FFF",
+                  "Offset": 0
+                }
+              }
+            },
+            "SMI": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x401B",
+                "cfg_init": "0x28",
+                "BR_DIV": {
+                  "Mask": "0xff",
+                  "Offset": 0
+                }
+              }
+            },
+            "GP": {
+              "MEM_Offset": "0x0",
+              "FW_ver_REG": {
+                "REG_OFFSET": "0x400F",
+                "FW_VER": {
+                  "Mask": "0xff",
+                  "Offset": 0
+                }
+              }
+            }
+          },
+          "FT": {
+            "ST_PULSER": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x4001",
+                "START_TX": {
+                  "Mask": "0x01",
+                  "Offset": 0
+                },
+                "SW_TRIGGER": {
+                  "Mask": "0x02",
+                  "Offset": 1
+                },
+                "TRG_SRC": {
+                  "Mask": "0x04",
+                  "Offset": 2
+                },
+                "RW_MODE": {
+                  "Mask": "0x08",
+                  "Offset": 3
+                },
+                "TX_SIZE": {
+                  "Mask": "0x7FFF0",
+                  "Offset": 4
+                },
+                "WRITE_ADDRESS": {
+                  "Mask": "0xFFF80000",
+                  "Offset": 19
+                }
+              },
+              "DEV_MASK": {
+                "cfg_init": "0xffff",
+                "REG_OFFSET": "0x4007"
+              },
+              "STATUS_REG": {
+                "REG_OFFSET": "0x4008"
+              },
+              "ST_TRIG_DUT_REG": {
+                "REG_OFFSET": "0x400C",
+                "TRIG_DURATION": {
+                  "Mask": "0xFFFF",
+                  "Offset": 0
+                },
+                "CTL_3_3_V": {
+                  "Mask": "0x10000",
+                  "Offset": 16
+                }
+              },
+              "RX_DATA": {
+                "REG_OFFSET": "0x1000"
+              },
+              "TX_DATA": {
+                "REG_OFFSET": "0x800"
+              }
+            },
+            "SPI": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x4000",
+                "START_TX": {
+                  "Mask": "0x01",
+                  "Offset": 0
+                },
+                "DEV_CS": {
+                  "Mask": "0x7C",
+                  "Offset": 2
+                },
+                "DDS_EN_PULSER_EN": {
+                  "Mask": "0x80",
+                  "Offset": 7
+                },
+                "TX_SIZE": {
+                  "Mask": "0xffff0000",
+                  "Offset": 16
+                }
+              },
+              "TX_DATA": {
+                "REG_OFFSET": "0x2000"
+              },
+              "RX_DATA": {
+                "REG_OFFSET": "0x2000"
+              }
+            },
+            "PLL": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x400A",
+                "PLL_LD": {
+                  "Mask": "0x01",
+                  "Offset": 0
+                },
+                "PLL_SYNC": {
+                  "Mask": "0x02",
+                  "Offset": 1
+                },
+                "PLL_CLK_SEL0": {
+                  "Mask": "0x04",
+                  "Offset": 2
+                },
+                "PLL_CLK_SEL1": {
+                  "Mask": "0x08",
+                  "Offset": 3
+                },
+                "PLL_STATUS": {
+                  "Mask": "0x10",
+                  "Offset": 4
+                }
+              }
+            },
+            "PS": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x4005",
+                "MHV_EN": {
+                  "Mask": "0x10000",
+                  "Offset": 16
+                },
+                "PHV_EN": {
+                  "Mask": "0x20000",
+                  "Offset": 17
+                }
+              },
+              "HV_CURR_LIM": {
+                "REG_OFFSET": "0x4002",
+                "PULSER_PS_TH": {
+                  "Mask": "0xFFFF",
+                  "Offset": 0
+                },
+                "SSR_TH": {
+                  "Mask": "0xFFFF0000",
+                  "Offset": 16
+                }
+              },
+              "PS_FAULT_REG": {
+                "REG_OFFSET": "0x4012",
+                "PULSER_PS_FAULT_VAL": {
+                  "Mask": "0xFFFF",
+                  "Offset": 0
+                },
+                "SSR_FAULT_VAL": {
+                  "Mask": "0xFFFF0000",
+                  "Offset": 16
+                }
+              },
+              "HV_MON_REB": {
+                "REG_OFFSET": "0x400E",
+                "ADC_DATA": {
+                  "Mask": "0x0FFF",
+                  "Offset": 0
+                }
+              }
+            },
+            "SMI": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x401B",
+                "cfg_init": "0x28",
+                "BR_DIV": {
+                  "Mask": "0xff",
+                  "Offset": 0
+                }
+              }
+            },
+            "GP": {
+              "MEM_Offset": "0x0",
+              "FW_ver_REG": {
+                "REG_OFFSET": "0x400F",
+                "FW_VER": {
+                  "Mask": "0xff",
+                  "Offset": 0
+                }
+              }
+            }
+          },
+          "RL": {
+            "ST_PULSER": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x4001",
+                "START_TX": {
+                  "Mask": "0x01",
+                  "Offset": 0
+                },
+                "SW_TRIGGER": {
+                  "Mask": "0x02",
+                  "Offset": 1
+                },
+                "TRG_SRC": {
+                  "Mask": "0x04",
+                  "Offset": 2
+                },
+                "RW_MODE": {
+                  "Mask": "0x08",
+                  "Offset": 3
+                },
+                "TX_SIZE": {
+                  "Mask": "0x7FFF0",
+                  "Offset": 4
+                },
+                "WRITE_ADDRESS": {
+                  "Mask": "0xFFF80000",
+                  "Offset": 19
+                }
+              },
+              "DEV_MASK": {
+                "cfg_init": "0xffff",
+                "REG_OFFSET": "0x4007"
+              },
+              "STATUS_REG": {
+                "REG_OFFSET": "0x4008"
+              },
+              "ST_TRIG_DUT_REG": {
+                "REG_OFFSET": "0x400C",
+                "TRIG_DURATION": {
+                  "Mask": "0xFFFF",
+                  "Offset": 0
+                },
+                "CTL_3_3_V": {
+                  "Mask": "0x10000",
+                  "Offset": 16
+                }
+              },
+              "RX_DATA": {
+                "REG_OFFSET": "0x1000"
+              },
+              "TX_DATA": {
+                "REG_OFFSET": "0x800"
+              }
+            },
+            "SPI": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x4000",
+                "START_TX": {
+                  "Mask": "0x01",
+                  "Offset": 0
+                },
+                "DEV_CS": {
+                  "Mask": "0x7C",
+                  "Offset": 2
+                },
+                "DDS_EN_PULSER_EN": {
+                  "Mask": "0x80",
+                  "Offset": 7
+                },
+                "TX_SIZE": {
+                  "Mask": "0xffff0000",
+                  "Offset": 16
+                }
+              },
+              "TX_DATA": {
+                "REG_OFFSET": "0x2000"
+              },
+              "RX_DATA": {
+                "REG_OFFSET": "0x2000"
+              }
+            },
+            "PLL": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x400A",
+                "PLL_LD": {
+                  "Mask": "0x01",
+                  "Offset": 0
+                },
+                "PLL_SYNC": {
+                  "Mask": "0x02",
+                  "Offset": 1
+                },
+                "PLL_CLK_SEL0": {
+                  "Mask": "0x04",
+                  "Offset": 2
+                },
+                "PLL_CLK_SEL1": {
+                  "Mask": "0x08",
+                  "Offset": 3
+                },
+                "PLL_STATUS": {
+                  "Mask": "0x10",
+                  "Offset": 4
+                }
+              }
+            },
+            "PS": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x4005",
+                "MHV_EN": {
+                  "Mask": "0x10000",
+                  "Offset": 16
+                },
+                "PHV_EN": {
+                  "Mask": "0x20000",
+                  "Offset": 17
+                }
+              },
+              "HV_CURR_LIM": {
+                "REG_OFFSET": "0x4002",
+                "PULSER_PS_TH": {
+                  "Mask": "0xFFFF",
+                  "Offset": 0
+                },
+                "SSR_TH": {
+                  "Mask": "0xFFFF0000",
+                  "Offset": 16
+                }
+              },
+              "PS_FAULT_REG": {
+                "REG_OFFSET": "0x4012",
+                "PULSER_PS_FAULT_VAL": {
+                  "Mask": "0xFFFF",
+                  "Offset": 0
+                },
+                "SSR_FAULT_VAL": {
+                  "Mask": "0xFFFF0000",
+                  "Offset": 16
+                }
+              },
+              "HV_MON_REB": {
+                "REG_OFFSET": "0x400E",
+                "ADC_DATA": {
+                  "Mask": "0x0FFF",
+                  "Offset": 0
+                }
+              }
+            },
+            "SMI": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x401B",
+                "cfg_init": "0x28",
+                "BR_DIV": {
+                  "Mask": "0xff",
+                  "Offset": 0
+                }
+              }
+            },
+            "GP": {
+              "MEM_Offset": "0x0",
+              "FW_ver_REG": {
+                "REG_OFFSET": "0x400F",
+                "FW_VER": {
+                  "Mask": "0xff",
+                  "Offset": 0
+                }
+              }
+            }
+          },
+          "DEV_COMM1": {
+            "UID": "0xEE",
+            "PSUA_IP": "192.168.170.120",
+            "PSUB_IP": "192.168.170.8",
+            "UDP_PORT": 8030,
+            "IS_PSU_CONNECTION_REAL": 1
+          },
+          "DEV_COMM2": {
+            "UID": "0xEE",
+            "PSUA_IP": "192.168.170.120",
+            "PSUB_IP": "192.168.170.8",
+            "UDP_PORT": 8030,
+            "IS_PSU_CONNECTION_REAL": 1
+          },
+          "DEV_COMM3": {
+            "UID": "0xEE",
+            "PSUA_IP": "192.168.170.120",
+            "PSUB_IP": "192.168.170.8",
+            "UDP_PORT": 8030,
+            "IS_PSU_CONNECTION_REAL": 1
+          },
+          "DEV_COMM4": {
+            "UID": "0xEE",
+            "PSUA_IP": "192.168.170.120",
+            "PSUB_IP": "192.168.170.8",
+            "UDP_PORT": 8030,
+            "IS_PSU_CONNECTION_REAL": 1
+          },
+          "DEV_COMM5": {
+            "UID": "0xEE",
+            "PSUA_IP": "192.168.170.120",
+            "PSUB_IP": "192.168.170.8",
+            "UDP_PORT": 8030,
+            "IS_PSU_CONNECTION_REAL": 1
+          }
+        },
+        {
+          "Blade_NUM": 0,
+          "Type": "HBlade",
+          "Brd_num": "00_00",
+          "FW_VER": 1,
+          "UID": "0xcc",
+          "Domain": 0,
+          "Enable": "Y",
+          "LP": "False",
+          "PL": {
+            "ST_PULSER": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x4001",
+                "START_TX": {
+                  "Mask": "0x01",
+                  "Offset": 0
+                },
+                "SW_TRIGGER": {
+                  "Mask": "0x02",
+                  "Offset": 1
+                },
+                "TRG_SRC": {
+                  "Mask": "0x04",
+                  "Offset": 2
+                },
+                "RW_MODE": {
+                  "Mask": "0x08",
+                  "Offset": 3
+                },
+                "TX_SIZE": {
+                  "Mask": "0x7FFF0",
+                  "Offset": 4
+                },
+                "WRITE_ADDRESS": {
+                  "Mask": "0xFFF80000",
+                  "Offset": 19
+                }
+              },
+              "DEV_MASK": {
+                "cfg_init": "0xffff",
+                "REG_OFFSET": "0x4007"
+              },
+              "STATUS_REG": {
+                "REG_OFFSET": "0x4008"
+              },
+              "ST_TRIG_DUT_REG": {
+                "REG_OFFSET": "0x400C",
+                "TRIG_DURATION": {
+                  "Mask": "0xFFFF",
+                  "Offset": 0
+                },
+                "CTL_3_3_V": {
+                  "Mask": "0x10000",
+                  "Offset": 16
+                }
+              },
+              "RX_DATA": {
+                "REG_OFFSET": "0x1000"
+              },
+              "TX_DATA": {
+                "REG_OFFSET": "0x800"
+              }
+            },
+            "SPI": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x4000",
+                "START_TX": {
+                  "Mask": "0x01",
+                  "Offset": 0
+                },
+                "DEV_CS": {
+                  "Mask": "0x7C",
+                  "Offset": 2
+                },
+                "DDS_EN_PULSER_EN": {
+                  "Mask": "0x80",
+                  "Offset": 7
+                },
+                "TX_SIZE": {
+                  "Mask": "0xffff0000",
+                  "Offset": 16
+                }
+              },
+              "TX_DATA": {
+                "REG_OFFSET": "0x2000"
+              },
+              "RX_DATA": {
+                "REG_OFFSET": "0x2000"
+              }
+            },
+            "PLL": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x400A",
+                "PLL_LD": {
+                  "Mask": "0x01",
+                  "Offset": 0
+                },
+                "PLL_SYNC": {
+                  "Mask": "0x02",
+                  "Offset": 1
+                },
+                "PLL_CLK_SEL0": {
+                  "Mask": "0x04",
+                  "Offset": 2
+                },
+                "PLL_CLK_SEL1": {
+                  "Mask": "0x08",
+                  "Offset": 3
+                },
+                "PLL_STATUS": {
+                  "Mask": "0x10",
+                  "Offset": 4
+                }
+              }
+            },
+            "PS": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x4005",
+                "MHV_EN": {
+                  "Mask": "0x10000",
+                  "Offset": 16
+                },
+                "PHV_EN": {
+                  "Mask": "0x20000",
+                  "Offset": 17
+                }
+              },
+              "HV_CURR_LIM": {
+                "REG_OFFSET": "0x4002",
+                "PULSER_PS_TH": {
+                  "Mask": "0xFFFF",
+                  "Offset": 0
+                },
+                "SSR_TH": {
+                  "Mask": "0xFFFF0000",
+                  "Offset": 16
+                }
+              },
+              "PS_FAULT_REG": {
+                "REG_OFFSET": "0x4012",
+                "PULSER_PS_FAULT_VAL": {
+                  "Mask": "0xFFFF",
+                  "Offset": 0
+                },
+                "SSR_FAULT_VAL": {
+                  "Mask": "0xFFFF0000",
+                  "Offset": 16
+                }
+              },
+              "HV_MON_REB": {
+                "REG_OFFSET": "0x400E",
+                "ADC_DATA": {
+                  "Mask": "0x0FFF",
+                  "Offset": 0
+                }
+              }
+            },
+            "SMI": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x401B",
+                "cfg_init": "0x28",
+                "BR_DIV": {
+                  "Mask": "0xff",
+                  "Offset": 0
+                }
+              }
+            },
+            "GP": {
+              "MEM_Offset": "0x0",
+              "FW_ver_REG": {
+                "REG_OFFSET": "0x400F",
+                "FW_VER": {
+                  "Mask": "0xff",
+                  "Offset": 0
+                }
+              }
+            }
+          },
+          "HL": {
+            "ST_PULSER": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x4001",
+                "START_TX": {
+                  "Mask": "0x01",
+                  "Offset": 0
+                },
+                "SW_TRIGGER": {
+                  "Mask": "0x02",
+                  "Offset": 1
+                },
+                "TRG_SRC": {
+                  "Mask": "0x04",
+                  "Offset": 2
+                },
+                "RW_MODE": {
+                  "Mask": "0x08",
+                  "Offset": 3
+                },
+                "TX_SIZE": {
+                  "Mask": "0x7FFF0",
+                  "Offset": 4
+                },
+                "WRITE_ADDRESS": {
+                  "Mask": "0xFFF80000",
+                  "Offset": 19
+                }
+              },
+              "DEV_MASK": {
+                "cfg_init": "0xffff",
+                "REG_OFFSET": "0x4007"
+              },
+              "STATUS_REG": {
+                "REG_OFFSET": "0x4008"
+              },
+              "ST_TRIG_DUT_REG": {
+                "REG_OFFSET": "0x400C",
+                "TRIG_DURATION": {
+                  "Mask": "0xFFFF",
+                  "Offset": 0
+                },
+                "CTL_3_3_V": {
+                  "Mask": "0x10000",
+                  "Offset": 16
+                }
+              },
+              "RX_DATA": {
+                "REG_OFFSET": "0x1000"
+              },
+              "TX_DATA": {
+                "REG_OFFSET": "0x800"
+              }
+            },
+            "SPI": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x4000",
+                "START_TX": {
+                  "Mask": "0x01",
+                  "Offset": 0
+                },
+                "DEV_CS": {
+                  "Mask": "0x7C",
+                  "Offset": 2
+                },
+                "DDS_EN_PULSER_EN": {
+                  "Mask": "0x80",
+                  "Offset": 7
+                },
+                "TX_SIZE": {
+                  "Mask": "0xffff0000",
+                  "Offset": 16
+                }
+              },
+              "TX_DATA": {
+                "REG_OFFSET": "0x2000"
+              },
+              "RX_DATA": {
+                "REG_OFFSET": "0x2000"
+              }
+            },
+            "PLL": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x400A",
+                "PLL_LD": {
+                  "Mask": "0x01",
+                  "Offset": 0
+                },
+                "PLL_SYNC": {
+                  "Mask": "0x02",
+                  "Offset": 1
+                },
+                "PLL_CLK_SEL0": {
+                  "Mask": "0x04",
+                  "Offset": 2
+                },
+                "PLL_CLK_SEL1": {
+                  "Mask": "0x08",
+                  "Offset": 3
+                },
+                "PLL_STATUS": {
+                  "Mask": "0x10",
+                  "Offset": 4
+                }
+              }
+            },
+            "PS": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x4005",
+                "MHV_EN": {
+                  "Mask": "0x10000",
+                  "Offset": 16
+                },
+                "PHV_EN": {
+                  "Mask": "0x20000",
+                  "Offset": 17
+                }
+              },
+              "HV_CURR_LIM": {
+                "REG_OFFSET": "0x4002",
+                "PULSER_PS_TH": {
+                  "Mask": "0xFFFF",
+                  "Offset": 0
+                },
+                "SSR_TH": {
+                  "Mask": "0xFFFF0000",
+                  "Offset": 16
+                }
+              },
+              "PS_FAULT_REG": {
+                "REG_OFFSET": "0x4012",
+                "PULSER_PS_FAULT_VAL": {
+                  "Mask": "0xFFFF",
+                  "Offset": 0
+                },
+                "SSR_FAULT_VAL": {
+                  "Mask": "0xFFFF0000",
+                  "Offset": 16
+                }
+              },
+              "HV_MON_REB": {
+                "REG_OFFSET": "0x400E",
+                "ADC_DATA": {
+                  "Mask": "0x0FFF",
+                  "Offset": 0
+                }
+              }
+            },
+            "SMI": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x401B",
+                "cfg_init": "0x28",
+                "BR_DIV": {
+                  "Mask": "0xff",
+                  "Offset": 0
+                }
+              }
+            },
+            "GP": {
+              "MEM_Offset": "0x0",
+              "FW_ver_REG": {
+                "REG_OFFSET": "0x400F",
+                "FW_VER": {
+                  "Mask": "0xff",
+                  "Offset": 0
+                }
+              }
+            }
+          },
+          "FT": {
+            "ST_PULSER": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x4001",
+                "START_TX": {
+                  "Mask": "0x01",
+                  "Offset": 0
+                },
+                "SW_TRIGGER": {
+                  "Mask": "0x02",
+                  "Offset": 1
+                },
+                "TRG_SRC": {
+                  "Mask": "0x04",
+                  "Offset": 2
+                },
+                "RW_MODE": {
+                  "Mask": "0x08",
+                  "Offset": 3
+                },
+                "TX_SIZE": {
+                  "Mask": "0x7FFF0",
+                  "Offset": 4
+                },
+                "WRITE_ADDRESS": {
+                  "Mask": "0xFFF80000",
+                  "Offset": 19
+                }
+              },
+              "DEV_MASK": {
+                "cfg_init": "0xffff",
+                "REG_OFFSET": "0x4007"
+              },
+              "STATUS_REG": {
+                "REG_OFFSET": "0x4008"
+              },
+              "ST_TRIG_DUT_REG": {
+                "REG_OFFSET": "0x400C",
+                "TRIG_DURATION": {
+                  "Mask": "0xFFFF",
+                  "Offset": 0
+                },
+                "CTL_3_3_V": {
+                  "Mask": "0x10000",
+                  "Offset": 16
+                }
+              },
+              "RX_DATA": {
+                "REG_OFFSET": "0x1000"
+              },
+              "TX_DATA": {
+                "REG_OFFSET": "0x800"
+              }
+            },
+            "SPI": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x4000",
+                "START_TX": {
+                  "Mask": "0x01",
+                  "Offset": 0
+                },
+                "DEV_CS": {
+                  "Mask": "0x7C",
+                  "Offset": 2
+                },
+                "DDS_EN_PULSER_EN": {
+                  "Mask": "0x80",
+                  "Offset": 7
+                },
+                "TX_SIZE": {
+                  "Mask": "0xffff0000",
+                  "Offset": 16
+                }
+              },
+              "TX_DATA": {
+                "REG_OFFSET": "0x2000"
+              },
+              "RX_DATA": {
+                "REG_OFFSET": "0x2000"
+              }
+            },
+            "PLL": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x400A",
+                "PLL_LD": {
+                  "Mask": "0x01",
+                  "Offset": 0
+                },
+                "PLL_SYNC": {
+                  "Mask": "0x02",
+                  "Offset": 1
+                },
+                "PLL_CLK_SEL0": {
+                  "Mask": "0x04",
+                  "Offset": 2
+                },
+                "PLL_CLK_SEL1": {
+                  "Mask": "0x08",
+                  "Offset": 3
+                },
+                "PLL_STATUS": {
+                  "Mask": "0x10",
+                  "Offset": 4
+                }
+              }
+            },
+            "PS": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x4005",
+                "MHV_EN": {
+                  "Mask": "0x10000",
+                  "Offset": 16
+                },
+                "PHV_EN": {
+                  "Mask": "0x20000",
+                  "Offset": 17
+                }
+              },
+              "HV_CURR_LIM": {
+                "REG_OFFSET": "0x4002",
+                "PULSER_PS_TH": {
+                  "Mask": "0xFFFF",
+                  "Offset": 0
+                },
+                "SSR_TH": {
+                  "Mask": "0xFFFF0000",
+                  "Offset": 16
+                }
+              },
+              "PS_FAULT_REG": {
+                "REG_OFFSET": "0x4012",
+                "PULSER_PS_FAULT_VAL": {
+                  "Mask": "0xFFFF",
+                  "Offset": 0
+                },
+                "SSR_FAULT_VAL": {
+                  "Mask": "0xFFFF0000",
+                  "Offset": 16
+                }
+              },
+              "HV_MON_REB": {
+                "REG_OFFSET": "0x400E",
+                "ADC_DATA": {
+                  "Mask": "0x0FFF",
+                  "Offset": 0
+                }
+              }
+            },
+            "SMI": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x401B",
+                "cfg_init": "0x28",
+                "BR_DIV": {
+                  "Mask": "0xff",
+                  "Offset": 0
+                }
+              }
+            },
+            "GP": {
+              "MEM_Offset": "0x0",
+              "FW_ver_REG": {
+                "REG_OFFSET": "0x400F",
+                "FW_VER": {
+                  "Mask": "0xff",
+                  "Offset": 0
+                }
+              }
+            }
+          },
+          "RL": {
+            "ST_PULSER": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x4001",
+                "START_TX": {
+                  "Mask": "0x01",
+                  "Offset": 0
+                },
+                "SW_TRIGGER": {
+                  "Mask": "0x02",
+                  "Offset": 1
+                },
+                "TRG_SRC": {
+                  "Mask": "0x04",
+                  "Offset": 2
+                },
+                "RW_MODE": {
+                  "Mask": "0x08",
+                  "Offset": 3
+                },
+                "TX_SIZE": {
+                  "Mask": "0x7FFF0",
+                  "Offset": 4
+                },
+                "WRITE_ADDRESS": {
+                  "Mask": "0xFFF80000",
+                  "Offset": 19
+                }
+              },
+              "DEV_MASK": {
+                "cfg_init": "0xffff",
+                "REG_OFFSET": "0x4007"
+              },
+              "STATUS_REG": {
+                "REG_OFFSET": "0x4008"
+              },
+              "ST_TRIG_DUT_REG": {
+                "REG_OFFSET": "0x400C",
+                "TRIG_DURATION": {
+                  "Mask": "0xFFFF",
+                  "Offset": 0
+                },
+                "CTL_3_3_V": {
+                  "Mask": "0x10000",
+                  "Offset": 16
+                }
+              },
+              "RX_DATA": {
+                "REG_OFFSET": "0x1000"
+              },
+              "TX_DATA": {
+                "REG_OFFSET": "0x800"
+              }
+            },
+            "SPI": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x4000",
+                "START_TX": {
+                  "Mask": "0x01",
+                  "Offset": 0
+                },
+                "DEV_CS": {
+                  "Mask": "0x7C",
+                  "Offset": 2
+                },
+                "DDS_EN_PULSER_EN": {
+                  "Mask": "0x80",
+                  "Offset": 7
+                },
+                "TX_SIZE": {
+                  "Mask": "0xffff0000",
+                  "Offset": 16
+                }
+              },
+              "TX_DATA": {
+                "REG_OFFSET": "0x2000"
+              },
+              "RX_DATA": {
+                "REG_OFFSET": "0x2000"
+              }
+            },
+            "PLL": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x400A",
+                "PLL_LD": {
+                  "Mask": "0x01",
+                  "Offset": 0
+                },
+                "PLL_SYNC": {
+                  "Mask": "0x02",
+                  "Offset": 1
+                },
+                "PLL_CLK_SEL0": {
+                  "Mask": "0x04",
+                  "Offset": 2
+                },
+                "PLL_CLK_SEL1": {
+                  "Mask": "0x08",
+                  "Offset": 3
+                },
+                "PLL_STATUS": {
+                  "Mask": "0x10",
+                  "Offset": 4
+                }
+              }
+            },
+            "PS": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x4005",
+                "MHV_EN": {
+                  "Mask": "0x10000",
+                  "Offset": 16
+                },
+                "PHV_EN": {
+                  "Mask": "0x20000",
+                  "Offset": 17
+                }
+              },
+              "HV_CURR_LIM": {
+                "REG_OFFSET": "0x4002",
+                "PULSER_PS_TH": {
+                  "Mask": "0xFFFF",
+                  "Offset": 0
+                },
+                "SSR_TH": {
+                  "Mask": "0xFFFF0000",
+                  "Offset": 16
+                }
+              },
+              "PS_FAULT_REG": {
+                "REG_OFFSET": "0x4012",
+                "PULSER_PS_FAULT_VAL": {
+                  "Mask": "0xFFFF",
+                  "Offset": 0
+                },
+                "SSR_FAULT_VAL": {
+                  "Mask": "0xFFFF0000",
+                  "Offset": 16
+                }
+              },
+              "HV_MON_REB": {
+                "REG_OFFSET": "0x400E",
+                "ADC_DATA": {
+                  "Mask": "0x0FFF",
+                  "Offset": 0
+                }
+              }
+            },
+            "SMI": {
+              "MEM_Offset": "0x0",
+              "CTL_REG": {
+                "REG_OFFSET": "0x401B",
+                "cfg_init": "0x28",
+                "BR_DIV": {
+                  "Mask": "0xff",
+                  "Offset": 0
+                }
+              }
+            },
+            "GP": {
+              "MEM_Offset": "0x0",
+              "FW_ver_REG": {
+                "REG_OFFSET": "0x400F",
+                "FW_VER": {
+                  "Mask": "0xff",
+                  "Offset": 0
+                }
+              }
+            }
+          },
+          "DEV_COMM1": {
+            "UID": "0xEE",
+            "PSUA_IP": "192.168.170.120",
+            "PSUB_IP": "192.168.170.8",
+            "UDP_PORT": 8030,
+            "IS_PSU_CONNECTION_REAL": 1
+          },
+          "DEV_COMM2": {
+            "UID": "0xEE",
+            "PSUA_IP": "192.168.170.120",
+            "PSUB_IP": "192.168.170.8",
+            "UDP_PORT": 8030,
+            "IS_PSU_CONNECTION_REAL": 1
+          },
+          "DEV_COMM3": {
+            "UID": "0xEE",
+            "PSUA_IP": "192.168.170.120",
+            "PSUB_IP": "192.168.170.8",
+            "UDP_PORT": 8030,
+            "IS_PSU_CONNECTION_REAL": 1
+          },
+          "DEV_COMM4": {
+            "UID": "0xEE",
+            "PSUA_IP": "192.168.170.120",
+            "PSUB_IP": "192.168.170.8",
+            "UDP_PORT": 8030,
+            "IS_PSU_CONNECTION_REAL": 1
+          },
+          "DEV_COMM5": {
+            "UID": "0xEE",
+            "PSUA_IP": "192.168.170.120",
+            "PSUB_IP": "192.168.170.8",
+            "UDP_PORT": 8030,
+            "IS_PSU_CONNECTION_REAL": 1
+          }
+        }
+      ]
+    }
+  }
+}
